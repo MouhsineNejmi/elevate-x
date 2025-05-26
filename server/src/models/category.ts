@@ -28,6 +28,7 @@ const categorySchema = new mongoose.Schema(
       },
       versionKey: false,
     },
+    collection: 'categories',
   }
 );
 

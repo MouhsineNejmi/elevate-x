@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { Listing } from './listings';
+import { Listing } from './listing';
 import { NotFoundError } from '../errors';
 
 export enum ReservationStatus {
@@ -106,6 +106,7 @@ const reservationSchema = new Schema(
       },
       versionKey: false,
     },
+    collection: 'reservations',
   }
 );
 

@@ -28,6 +28,7 @@ const amenitySchema = new mongoose.Schema(
       },
       versionKey: false,
     },
+    collection: 'amenities',
   }
 );
 

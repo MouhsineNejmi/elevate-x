@@ -23,7 +23,7 @@ import {
   loginValidation,
   registerValidation,
 } from '../validations/user.validation';
-import { Listing } from '../models/listings';
+import { Listing } from '../models/listing';
 
 const router = express.Router();
 
@@ -72,7 +72,11 @@ router.post(
 
     const user = await User.findOne({ email }).select('+password');
 
-    if (!user || !(await Password.compare(user.password, password))) {
+    if (!user) {
+      throw new BadRequestError('No user found with this email');
+    }
+
+    if (!(await Password.compare(user.password, password))) {
       throw new BadRequestError('Invalid Credentials');
     }
 

@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { Listing, ListingAttrs } from '../models/listings';
+import { Listing, ListingAttrs } from '../models/listing';
 import { asyncHandler } from '../utils/async-handler';
 import { requireAuth } from '../middlewares/require-auth.middleware';
 import { validate } from '../middlewares/validator.middleware';
@@ -124,6 +124,8 @@ router.get(
       .populate('category', 'id icon name');
 
     const total = await Listing.countDocuments(filter);
+
+    console.log(listings);
 
     return res.status(200).json({
       data: listings,
