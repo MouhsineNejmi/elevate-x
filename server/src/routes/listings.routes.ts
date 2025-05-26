@@ -125,8 +125,6 @@ router.get(
 
     const total = await Listing.countDocuments(filter);
 
-    console.log(listings);
-
     return res.status(200).json({
       data: listings,
       pagination: {
