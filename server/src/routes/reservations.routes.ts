@@ -14,8 +14,8 @@ import {
   Reservation,
   ReservationAttrs,
   ReservationStatus,
-} from '../models/reservations';
-import { Listing } from '../models/listings';
+} from '../models/reservation';
+import { Listing } from '../models/listing';
 import {
   createReservationValidation,
   updateReservationValidation,

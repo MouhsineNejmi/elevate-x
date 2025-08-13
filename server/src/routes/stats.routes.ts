@@ -4,9 +4,9 @@ import moment from 'moment';
 import { currentUser } from '../middlewares/current-user.middleware';
 import { requireAdmin } from '../middlewares/require-admin.middleware';
 
-import { Listing } from '../models/listings';
+import { Listing } from '../models/listing';
 import { User } from '../models/user';
-import { Reservation } from '../models/reservations';
+import { Reservation } from '../models/reservation';
 
 import { asyncHandler } from '../utils/async-handler';
 

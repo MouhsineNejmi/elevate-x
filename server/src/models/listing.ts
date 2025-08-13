@@ -105,6 +105,7 @@ const listingSchema = new mongoose.Schema(
       },
       versionKey: false,
     },
+    collection: 'listings',
   }
 );
 

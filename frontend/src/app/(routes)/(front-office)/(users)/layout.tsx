@@ -8,9 +8,10 @@ const ProtectedLayout = async ({ children }: { children: React.ReactNode }) => {
     redirect('/login');
   }
 
-  if (user && user.role !== 'admin') {
-    redirect('/unauthorized');
-  }
+  // if (user && user.role !== 'admin') {
+  //   redirect('/unauthorized');
+  // }
+
   return <>{children}</>;
 };
 

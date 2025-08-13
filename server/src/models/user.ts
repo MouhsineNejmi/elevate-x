@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { ListingAttrs } from './listings';
+import { ListingAttrs } from './listing';
 
 import { Password } from '../services/password.service';
 import { UserRole } from '../types/user.types';
@@ -78,6 +78,7 @@ const userSchema = new mongoose.Schema(
       },
       versionKey: false,
     },
+    collection: 'users',
   }
 );
 

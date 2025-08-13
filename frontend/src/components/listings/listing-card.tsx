@@ -53,6 +53,8 @@ const ListingCard: React.FC<ListingCardProps> = ({
     );
   }, [listing.price]);
 
+  console.log(listing.price);
+
   const countryName = useMemo(
     () =>
       COUNTRIES.find((country) => country.code === listing.location.country)
@@ -87,7 +89,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
         </h3>
 
         <p className='font-light text-sm text-neutral-600 mb-1'>
-          {listing.category.name}
+          {listing?.category?.name}
         </p>
 
         <div className='flex flex-row items-center gap-1 mb-1'>

@@ -6,11 +6,11 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-import userRoutes from './routes/user.routes';
+import userRoutes from './routes/users.routes';
 import listingRoutes from './routes/listings.routes';
 import reservationRoutes from './routes/reservations.routes';
-import categoryRoutes from './routes/category.routes';
-import amenityRoutes from './routes/amenity.routes';
+import categoryRoutes from './routes/categories.routes';
+import amenityRoutes from './routes/amenities.routes';
 import statsRoutes from './routes/stats.routes';
 
 import { securityMiddleware } from './middlewares/security.middleware';

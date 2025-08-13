@@ -1,7 +1,10 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useRouter, useParams } from 'next/navigation';
+import {
+  // useRouter,
+  useParams,
+} from 'next/navigation';
 import { Range } from 'react-date-range';
 import { differenceInDays, eachDayOfInterval } from 'date-fns';
 
@@ -32,7 +35,7 @@ const initialDateRange = {
 
 const ListingClient = ({ listing, reservations, user }: ListingClientProps) => {
   const { listingId } = useParams();
-  const router = useRouter();
+  // const router = useRouter();
   const price = calculateTotal(listing.price);
   const [totalAmount, setTotalAmount] = useState<number>(price);
   const [guestCount, setGuestCount] = useState(0);
@@ -66,7 +69,7 @@ const ListingClient = ({ listing, reservations, user }: ListingClientProps) => {
       if (!errors) {
         toast({ title: 'Property Reserved Successfully!' });
         setDateRange(initialDateRange);
-        router.push('/my-reservations');
+        // router.push('/my-reservations');
       }
     } catch {
       toast({
@@ -81,7 +84,7 @@ const ListingClient = ({ listing, reservations, user }: ListingClientProps) => {
     errors,
     guestCount,
     listingId,
-    router,
+    // router,
     user,
   ]);
 
